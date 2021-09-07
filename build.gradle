@@ -1,0 +1,11 @@
+plugins {
+    id 'java'
+}
+
+java {
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+dependencies {
+
+}
