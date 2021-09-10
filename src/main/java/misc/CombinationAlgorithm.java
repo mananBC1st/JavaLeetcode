@@ -22,6 +22,9 @@ public final class CombinationAlgorithm<ElementType> {
     }
 
     public List<List<ElementType>> select(List<ElementType> collection, int selectionNumber) {
+        if (selectionNumber > collection.size())
+            throw new IllegalArgumentException("selectionNumber can't greater than collection's length");
+        res.clear();
         doSelect(collection, 0, selectionNumber, new ArrayList<>());
         return res;
     }
